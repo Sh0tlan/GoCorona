@@ -156,7 +156,7 @@
     margin-left: 20px;
   }
 
-  span {
+  .icon__menu span {
     height: 2px;
     background-color: #000;
   }
@@ -204,7 +204,131 @@
   display: flex;
 }
 
+////////////////////////////////////////////////////////////////
 /* MAIN */
 .main {
   flex: 1 1 auto;
+}
+
+.get-started {
+  background-color: #fafbfb;
+  &__container {
+    padding: 100px 15px 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: 768.98px) {
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 267px;
+      border-radius: 30px 0px 0px 30px;
+      transform: translate(100%, 0);
+      width: 100vw;
+      height: 100%;
+      background-color: #ec5863;
+
+      @media (max-width: 991.98px) {
+        right: 185px;
+        border-radius: 20px 0px 0px 20px;
+      }
+      @media (max-width: 768.98px) {
+        display: none;
+      }
+    }
+  }
+  &__content {
+    flex: 0 1 48%;
+    padding: 0px 20px;
+
+    @media (max-width: 768.98px) {
+      flex: 1 1 100%;
+      padding: 0;
+    }
+  }
+  &__image {
+    flex: 0 1 52%;
+    position: relative;
+    z-index: 2;
+
+    & img {
+      max-width: 100%;
+    }
+    @media (max-width: 768.98px) {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 30px 0;
+    }
+  }
+
+  &__video {
+    flex: 1 1 100%;
+    padding: 60px 0px 0px 20px;
+
+    @media (max-width: 768.98px) {
+      padding: 0;
+    }
+  }
+  &__block-text {
+    max-width: 410px;
+    @media (max-width: 768.98px) {
+      max-width: none;
+    }
+  }
+}
+
+.video-get-started {
+  display: inline-flex;
+  align-items: center;
+  &__icon {
+    flex: 0 0 44px;
+  }
+  &__body {
+    padding: 0px 0px 0px 12px;
+  }
+  &__title {
+    color: #b0b0b0;
+    font-size: 13px;
+    line-height: 126%;
+    letter-spacing: 1.5px;
+
+    &:not(:last-child) {
+      margin: 0px 0px 5px 0px;
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #000;
+    line-height: 126%;
+    letter-spacing: 2px;
+  }
+}
+
+.block-text {
+  &__title {
+    font-size: 44px;
+    line-height: 126%;
+    font-weight: 700;
+    color: #000;
+    &:not(:last-child) {
+      margin: 0px 0px 12px 0px;
+    }
+    & span {
+      color: #ec5863;
+    }
+    &_blue span {
+      color: #587eec;
+    }
+  }
+  &__text {
+    line-height: 138.5%;
+    &:not(:last-child) {
+      margin: 0px 0px 12px 0px;
+    }
+  }
 }
